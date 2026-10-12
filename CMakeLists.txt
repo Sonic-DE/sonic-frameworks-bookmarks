@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.30)
 
 set(KF_VERSION "6.30.0") # handled by release scripts
 set(KF_DEP_VERSION "6.30.0") # handled by release scripts
@@ -25,6 +25,7 @@ include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMGenerateQDoc)
+include(ECMInstalledLibraryCheck)
 
 include(ECMPoQmTools)
 
@@ -38,7 +39,7 @@ ecm_setup_version(PROJECT
                   SOVERSION 6)
 
 # Dependencies
-set(REQUIRED_QT_VERSION 6.9.0)
+set(REQUIRED_QT_VERSION 6.10.0)
 
 find_package(Qt6 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Widgets Xml)
 
