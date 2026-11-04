@@ -261,11 +261,15 @@ protected:
      */
     QList<QAction *> m_actions;
 
+    /*
+     * Opens the bookmark editor; shows an error box when it can't be started.
+     */
+    void slotEditBookmarks();
+
 private Q_SLOTS:
     KBOOKMARKSWIDGETS_NO_EXPORT void slotCustomContextMenu(const QPoint &);
 
 private:
-    void slotEditBookmarks();
     KBOOKMARKSWIDGETS_NO_EXPORT void init();
 
 private:
